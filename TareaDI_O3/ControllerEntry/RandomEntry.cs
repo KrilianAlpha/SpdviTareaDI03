@@ -43,6 +43,7 @@ namespace ControllerEntry
 
         private void label1_TextChanged(object sender, EventArgs e)
         {
+            flowLayoutPanel1.Controls.Clear();
             var productModel = DataAccess.GetProductModel(int.Parse(label1.Text));
             if (productModel == null)
             {
@@ -53,6 +54,22 @@ namespace ControllerEntry
                 MemoryStream ms = new MemoryStream(productModel.LargePhoto);
                 Image largePhoto = Image.FromStream(ms);
                 pictureBox1.Image = largePhoto;
+
+                productModel.List = DataAccess.GetProducts(int.Parse(label1.Text));
+                label3.Text = productModel.List.Min(product => product.price.ToString());
+                foreach (Product product in productModel.List)
+                {
+                    if (product.Size == null)
+                    {
+                    /*pos no se*/
+                    } else
+                    {
+                        Button sizeBtn = new Button();
+                        sizeBtn.Text = product.Size;
+                        sizeBtn.Name = product.ProductId.ToString();
+                        flowLayoutPanel1.Controls.Add(sizeBtn);
+                    }
+                }
             }
         }
     }

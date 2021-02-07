@@ -94,9 +94,9 @@ namespace ControllerEntry
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 221);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 189);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(367, 85);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(484, 136);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // flowLayoutPanel2
@@ -185,7 +185,7 @@ namespace ControllerEntry
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "RandomEntry";
-            this.Size = new System.Drawing.Size(490, 309);
+            this.Size = new System.Drawing.Size(490, 347);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();

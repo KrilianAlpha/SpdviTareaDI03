@@ -20,5 +20,15 @@ namespace ControllerEntry
                 return productModel;
             }
         }
+        public static List<Product> GetProducts(int productModelId)
+        {
+            string connectionString = "Server = tcp:spdvi2021justojavier.database.windows.net,1433; Initial Catalog = AdventureWorks2016; Persist Security Info = False; User ID = krilian; Password = milu2000A; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string sql = "dbo.getRandomProductPrice '" + productModelId.ToString() + "'";
+                var products = conn.Query<Product>(sql).ToList();
+                return products;
+            }
+        }
     }
 }

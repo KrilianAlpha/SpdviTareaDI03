@@ -11,5 +11,6 @@ namespace ControllerEntry
         public int ProductModelID { get; set; }
         public string Name { get; set; }
         public byte[] LargePhoto { get; set; }
+        public List<Product> List { get; set; }
     }
 }
