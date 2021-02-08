@@ -220,7 +220,8 @@ namespace ControllerEntry
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 6;
             this.label9.Text = "label9";
-            this.label9.TextChanged += new System.EventHandler(this.label9_TextChanged);
+            this.label9.Visible = false;
+            
             // 
             // RandomEntry
             // 

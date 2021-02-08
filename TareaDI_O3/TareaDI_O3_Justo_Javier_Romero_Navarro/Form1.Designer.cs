@@ -38,10 +38,10 @@ namespace TareaDI_O3_Justo_Javier_Romero_Navarro
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.randomEntry1 = new ControllerEntry.RandomEntry();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.randomEntry1 = new ControllerEntry.RandomEntry();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -83,7 +83,7 @@ namespace TareaDI_O3_Justo_Javier_Romero_Navarro
             this.button2.TabIndex = 4;
             this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Visible = false;
             // 
             // tableLayoutPanel1
             // 
@@ -129,6 +129,24 @@ namespace TareaDI_O3_Justo_Javier_Romero_Navarro
             this.tableLayoutPanel2.Size = new System.Drawing.Size(162, 417);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(3, 129);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(156, 20);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Search First Result by Size";
+            this.label2.Visible = false;
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.randomEntry1);
@@ -144,24 +162,9 @@ namespace TareaDI_O3_Justo_Javier_Romero_Navarro
             this.randomEntry1.ProductId = 0;
             this.randomEntry1.ProductModelID = 0;
             this.randomEntry1.Size = new System.Drawing.Size(593, 262);
+            this.randomEntry1.SizePro = null;
             this.randomEntry1.TabIndex = 0;
             this.randomEntry1.ProId += new System.EventHandler<System.EventArgs>(this.randomEntry1_ProId);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(3, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Search First Result by Size";
             // 
             // Form1
             // 

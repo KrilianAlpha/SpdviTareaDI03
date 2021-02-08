@@ -27,7 +27,7 @@ namespace TareaDI_O3_Justo_Javier_Romero_Navarro
 
         private void textBox1_MouseHover(object sender, EventArgs e)
         {
-            toolTip1.SetToolTip(textBox1, "Edit this Camp And then Click on the search Button to search a Product by it's Product ID");
+            /*toolTip1.SetToolTip(textBox1, "Edit this Camp And then Click on the search Button to search a Product by it's Product ID");*/
         }
 
         private void randomEntry1_ProId(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace TareaDI_O3_Justo_Javier_Romero_Navarro
             textBox1.Text = randomEntry1.ProductId.ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        /*private void button2_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == "S")
             {
@@ -65,6 +65,6 @@ namespace TareaDI_O3_Justo_Javier_Romero_Navarro
                 randomEntry1.SizePro = textBox2.Text;
                 textBox2.Text = "";
             }
-        }
+        }*/
     }
 }
