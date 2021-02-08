@@ -18,7 +18,7 @@ namespace ControllerEntry
             get => int.Parse(label1.Text);
             set => label1.Text = value.ToString();
         }
-        
+        private int _productId;
         public RandomEntry()
         {
             InitializeComponent();
@@ -43,6 +43,7 @@ namespace ControllerEntry
 
         private void label1_TextChanged(object sender, EventArgs e)
         {
+            Product theone = new Product();
             flowLayoutPanel1.Controls.Clear();
             var productModel = DataAccess.GetProductModel(int.Parse(label1.Text));
             if (productModel == null)
@@ -56,20 +57,52 @@ namespace ControllerEntry
                 pictureBox1.Image = largePhoto;
 
                 productModel.List = DataAccess.GetProducts(int.Parse(label1.Text));
-                label3.Text = productModel.List.Min(product => product.price.ToString());
-                foreach (Product product in productModel.List)
+                var products = productModel.List.GroupBy(x => x.Size).Select(x => x.First()).ToList();
+
+                int minimum = int.MaxValue;
+                foreach (Product product in products)
                 {
+                    
                     if (product.Size == null)
                     {
-                    /*pos no se*/
-                    } else
+                        theone = product;
+                    }
+                    else
                     {
+                        if (product.Size == "XL")
+                        {
+                            Console.WriteLine("XL Reached");
+                        }
+                        else if (product.Size == "L")
+                        {
+                            theone = product;
+                        } 
+                        else if (product.Size == "M")
+                        {
+                            theone = product;
+                        }
+                        else if (product.Size == "S")
+                        {
+                            theone = product;
+                        }
+                        else
+                        {
+                            int num = int.Parse(product.Size);
+                            if (num < minimum)
+                            {
+                                minimum = num;
+                                theone = product;
+                            }
+                        }
                         Button sizeBtn = new Button();
                         sizeBtn.Text = product.Size;
                         sizeBtn.Name = product.ProductId.ToString();
+                        /*sizeBtn.Click += productId*/
                         flowLayoutPanel1.Controls.Add(sizeBtn);
                     }
                 }
+                label3.Text = theone.Listprice.ToString();
+                label8.Text = theone.ProductId.ToString();
             }
         }
     }

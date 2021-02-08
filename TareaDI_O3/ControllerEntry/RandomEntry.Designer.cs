@@ -44,12 +44,16 @@ namespace ControllerEntry
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -115,12 +119,14 @@ namespace ControllerEntry
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel5, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel6, 0, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.41177F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.58823F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 99F));
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.20988F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.79012F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(159, 171);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
@@ -130,25 +136,25 @@ namespace ControllerEntry
             this.flowLayoutPanel3.Controls.Add(this.label1);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(153, 33);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(153, 29);
             this.flowLayoutPanel3.TabIndex = 0;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.label5);
             this.flowLayoutPanel4.Controls.Add(this.label2);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 42);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 38);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(153, 26);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(153, 40);
             this.flowLayoutPanel4.TabIndex = 1;
             // 
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Controls.Add(this.label6);
             this.flowLayoutPanel5.Controls.Add(this.label3);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 74);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 84);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(153, 94);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(153, 43);
             this.flowLayoutPanel5.TabIndex = 2;
             // 
             // label4
@@ -178,6 +184,33 @@ namespace ControllerEntry
             this.label6.TabIndex = 0;
             this.label6.Text = "Prize:";
             // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.Controls.Add(this.label7);
+            this.flowLayoutPanel6.Controls.Add(this.label8);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 133);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(153, 35);
+            this.flowLayoutPanel6.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "ProductID:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(67, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "label8";
+            // 
             // RandomEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +229,8 @@ namespace ControllerEntry
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
+            this.flowLayoutPanel6.ResumeLayout(false);
+            this.flowLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -216,5 +251,8 @@ namespace ControllerEntry
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
